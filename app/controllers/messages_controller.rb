@@ -27,6 +27,13 @@ class MessagesController < ApplicationController
     render :json => [current_user.email, @message.created_at.strftime("%H:%M %d %b. %Y")], status: :ok
   end
 
+  def payload
+    puts '+++++++++++++++++++ 777 +++++++++++++++++++++++++++'
+    push = JSON.parse(request.body.read)
+    puts "I got some JSON: #{push.inspect}"
+    redirect_to root_path
+  end
+
   private
   def get_chat
     redirect_to root_path if (@chat = Chat.where(id: params[:chat_id]).first).blank?
