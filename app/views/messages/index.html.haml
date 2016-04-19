@@ -1,0 +1,25 @@
+.container-fluid
+  .row
+    .col-md-2.col-md-offset-1
+      %p
+        %strong='Choose Chat:'
+        = button_tag 'Refresh', class: 'refresh_chats'
+      #chats
+        = render partial: 'chats/chats'
+    .col-md-6
+      .chat_container
+        #chat_room
+          = render partial: 'history'
+      = text_area_tag 'message', '', size: "100x2", maxlength: 180
+      = button_tag 'Send Message', class: 'new_message'
+    .col-md-2
+      %p
+        %strong= "Room: #{@chat.name}"
+        %br
+        = button_tag 'Refresh', class: 'refresh_users', value: @chat.id
+        = button_tag 'Exit room', class: 'exit_chat'
+      = render partial: 'users'
+
+
+
+

@@ -1,0 +1,6 @@
+- @messages.each do |message|
+  %p
+    %strong="#{message.user.email}: "
+    =" #{message.text}"
+    %br
+    %span= message.created_at.strftime("%H:%M %d %b. %Y")

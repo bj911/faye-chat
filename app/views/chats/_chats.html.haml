@@ -1,0 +1,4 @@
+#chat_list
+  - if @chats.present?
+    - @chats.each do |chat|
+      %p= link_to chat.name, chat_messages_path(chat), id: chat.id
