@@ -28,6 +28,7 @@ class MessagesController < ApplicationController
   end
 
   def payload
+    puts '+++++++++++++++++++ 888 +++++++++++++++++++++++++++'
     puts '+++++++++++++++++++ 777 +++++++++++++++++++++++++++'
     push = JSON.parse(request.body.read)
     puts "I got some JSON: #{push.inspect}"
