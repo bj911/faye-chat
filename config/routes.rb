@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get '/messages/autocomplete' => 'messages#autocomplete'
   get '/search' => 'messages#search', as: 'search'
 
-  post '/payload' => 'messages#autocomplete'
+  post '/payload' => 'messages#payload'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
