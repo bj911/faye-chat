@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   # before_filter :authenticate_user!
   before_action :get_chat, except: :search
+  require 'json'
 
   def index
     @chats = Chat.all
