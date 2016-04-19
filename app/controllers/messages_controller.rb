@@ -29,6 +29,7 @@ class MessagesController < ApplicationController
   end
 
   def payload
+    puts '81y589012650129785612098'
     puts '+++++++++++++++++++ 888 +++++++++++++++++++++++++++'
     puts '+++++++++++++++++++ 777 +++++++++++++++++++++++++++'
     push = JSON.parse(request.body.read)
