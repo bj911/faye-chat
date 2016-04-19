@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  # before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: :payload
   before_action :get_chat, except: [:search, :payload]
   require 'json'
 
