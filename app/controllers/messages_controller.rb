@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   # before_filter :authenticate_user!
-  # before_action :get_chat, except: :search
+  before_action :get_chat, except: [:search, :payload]
   require 'json'
 
   def index
@@ -29,7 +29,7 @@ class MessagesController < ApplicationController
   end
 
   def payload
-    puts '81y589012650129785612098'
+    puts '817777777'
     puts '+++++++++++++++++++ 888 +++++++++++++++++++++++++++'
     puts '+++++++++++++++++++ 777 +++++++++++++++++++++++++++'
     push = JSON.parse(request.body.read)
