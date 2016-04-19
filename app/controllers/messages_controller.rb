@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_filter :authenticate_user!
+  # before_filter :authenticate_user!
   before_action :get_chat, except: :search
 
   def index
@@ -28,6 +28,7 @@ class MessagesController < ApplicationController
   end
 
   def payload
+    puts '+++++++++++++++++++ 888 +++++++++++++++++++++++++++'
     puts '+++++++++++++++++++ 777 +++++++++++++++++++++++++++'
     push = JSON.parse(request.body.read)
     puts "I got some JSON: #{push.inspect}"
