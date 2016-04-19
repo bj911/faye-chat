@@ -34,7 +34,7 @@ class MessagesController < ApplicationController
     puts '+++++++++++++++++++ 777 +++++++++++++++++++++++++++'
     push = JSON.parse(request.body.read)
     puts "I got some JSON: #{push.inspect}"
-    render :back
+    redirect_to '/'
   end
 
   private
