@@ -29,9 +29,6 @@ class MessagesController < ApplicationController
   end
 
   def payload
-    puts '817777777'
-    puts '+++++++++++++++++++ 888 +++++++++++++++++++++++++++'
-    puts '+++++++++++++++++++ 777 +++++++++++++++++++++++++++'
     push = JSON.parse(request.body.read)
     puts "I got some JSON: #{push.inspect}"
     render :nothing => true, :status => 200, :content_type => 'text/html'
