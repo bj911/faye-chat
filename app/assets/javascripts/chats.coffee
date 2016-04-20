@@ -1,10 +1,10 @@
 $(document).ready ->
 
-  $ ->
-    $chats = $('#chat_list p').map(->
-      $(this).text()
-    ).get()
-    $('#message_search').autocomplete source: $chats
+#  $ ->
+#    $chats = $('#chat_list p').map(->
+#      $(this).text()
+#    ).get()
+#    $('#message_search').autocomplete source: $chats
 
   #  $ ->
 #    $('#message_search').typeahead

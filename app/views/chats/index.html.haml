@@ -1,14 +1,14 @@
 #new_chat
   = text_field_tag 'name'
   = button_tag 'Create new chat', class: 'new_chat'
-= form_tag search_path, class: "form-inline", method: :get do
-  %p
-    .input-group.input-group-lg
-      - if params[:query].present?
-        .input-group-btn
-          = link_to "clear", search_path, class: "btn btn-default"
-      = text_field_tag :query, params[:query], class: "form-control", id: "message_search",autocomplete: "off"
-      .input-group-btn
-        = submit_tag "Search", class: "btn btn-primary"
+-#= form_tag search_path, class: "form-inline", method: :get do
+-#  %p
+-#    .input-group.input-group-lg
+-#      - if params[:query].present?
+-#        .input-group-btn
+-#          = link_to "clear", search_path, class: "btn btn-default"
+-#      = text_field_tag :query, params[:query], class: "form-control", id: "message_search",autocomplete: "off"
+-#      .input-group-btn
+-#        = submit_tag "Search", class: "btn btn-primary"
 %p='Choose Chat:'
 = render partial: 'chats'

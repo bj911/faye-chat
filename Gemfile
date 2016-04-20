@@ -30,7 +30,7 @@ gem 'thin'
 gem 'faye'
 gem 'bootstrap-sass'
 gem 'devise'
-gem "searchkick"
+# gem "searchkick"
 # Use Unicorn as the app server
 # gem 'unicorn'
 
